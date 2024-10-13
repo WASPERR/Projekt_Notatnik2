@@ -1,0 +1,15 @@
+{% extends "notatki/base.html" %}
+{% block title %}NOTATNIK{% endblock %}
+{% block content %}
+ <h1>NOTATKI</h1>
+ {% for note in notes %}
+ <h2>
+ {{ note.title }}
+ </a>
+ </h2>
+ <p class="date">
+ Opublikowany {{ note.publish }} przez {{ note.author }}
+ </p>
+ {{ note.body|truncatewords:80|linebreaks }}
+ {% endfor %}
+{% endblock %}
