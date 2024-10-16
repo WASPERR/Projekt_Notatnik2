@@ -12,5 +12,5 @@ def note_detail(request, slug):
                              slug=slug,
                              status=Note.Status.PUBLISHED)
     return render(request,
- 'notatki/note/list.html',
+ 'notatki/note/detail.html',
  {'note': note})

@@ -3,11 +3,10 @@
 {% block content %}
  <h1>NOTATKI</h1>
  {% for note in notes %}
- <h2>
-  <a href="{{ post.get_absolute_url }}">
+<h2>
+ <a href="{% url 'note_detail' %}"></a>>
+</h2>
  {{ note.title }}
-
- </h2>
  <p class="date">
  Opublikowany {{ note.publish }} przez {{ note.author }}
  </p>
